@@ -1,6 +1,8 @@
 #include <iostream>
 #include <chrono>
+#include <string>
 #include <unistd.h>
+
 
 int defaultScreenTime = 1200;
 int userTimeInput;
@@ -11,17 +13,9 @@ class select
 {
 public:
 
-    user_Select_time()
+    void userSelect()
     {
-          std::cout << "Please select a time: " << std::endl;
-    std::cout << "Press 1 for a reminder every 10 minutes\n";
-    std::cout << "Press 2 for a reminder every 20 minutes\n";
-    std::cout << "Press 3 for a reminder every 30 minutes\n";
-    std::cout << "Press 4 for a reminder every 40 minutes\n";
-    std::cout << "Press 5 for a reminder every 50 minutes\n";
-    std::cout << "Press 6 for a reminder every hour\n\n >";
-
-    std::cin >> userTimeInput;
+       std::cin >> userTimeInput;
      
     if (userTimeInput == 1)
     {
@@ -53,10 +47,7 @@ public:
          std::cout << '\a';
          std::cout << "Continue working :)" << std::endl;
         }
-    }
-     else{
-           
-         }
+   }  
     if (userTimeInput == 2)
     {
         system("clear");
@@ -87,6 +78,7 @@ public:
          std::cout << "Continue working :)" << std::endl;
         }
     }
+
 
     if (userTimeInput == 3)
     {
@@ -210,7 +202,13 @@ public:
          std::cout << '\a';
          std::cout << "Continue working :)" << std::endl;
         }
-    }
+    } 
+      else
+      {
+        std::cin.ignore();
+         std::cout <<"Sorry this is not a command...\n\n";
+         userSelect();
+      }
     }
     select();
     ~select();

@@ -8,7 +8,7 @@
 
 //Changed "rawScreenTime" Variable name to "defaultScreenTime"
 
-int defaultScreenTime = 1200000;
+int defaultScreenTime = 1200;
 int userTimeInput;
 int userSelection[6] = {600, 1200, 1800, 2400, 3000, 3600};
 int restTime = 20;

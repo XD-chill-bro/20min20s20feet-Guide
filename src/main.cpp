@@ -1,5 +1,6 @@
 #include <iostream>
 #include <chrono>
+#include <string>
 #include <unistd.h>
 
 //Removed using namespace std to have "bloat free" code
@@ -55,10 +56,7 @@ int main()
          std::cout << '\a';
          std::cout << "Continue working :)" << std::endl;
         }
-    }
-     else{
-           
-         }
+   }  
     if (userTimeInput == 2)
     {
     	system("clear");
@@ -89,6 +87,7 @@ int main()
          std::cout << "Continue working :)" << std::endl;
         }
     }
+
 
     if (userTimeInput == 3)
     {
@@ -212,6 +211,11 @@ int main()
          std::cout << '\a';
          std::cout << "Continue working :)" << std::endl;
         }
-    }
-
- }
+    } 
+      else
+      {
+      	std::cin.ignore();
+         std::cout <<"Sorry this is not a command...\n\n";
+         main();
+      }
+}

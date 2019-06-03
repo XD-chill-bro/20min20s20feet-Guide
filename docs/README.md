@@ -10,4 +10,4 @@ After that you're supposed to look at something about 20 feet away.
 The application will tell you when the 20 seconds are over.
 Then you can look at your screen again (for 20min).
 
-This cycle repeads untill you close the application.
+This cycle repeats untill you close the application.
